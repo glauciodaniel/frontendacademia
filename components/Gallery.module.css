@@ -1,0 +1,176 @@
+.callToAction{
+    max-width: 1200px;
+    font-weight: normal;
+    line-height: 40px;
+    padding: 2%;
+    /* font-size: 20px; */
+    margin: 80px auto;
+    text-align: center;
+    
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1450px;
+}
+.photo{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    margin-bottom: 20px;
+    cursor: zoom-in;
+}
+.container .photo img{
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    /* max-width: 500px; */
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    max-height: 450px;
+    margin: 0 auto;
+    background-image: url("/assets/Icon/lupa.svg");
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: center;
+    background-color: rgba(241, 80, 0,0.6);
+    transition-duration: 0.3s;
+}
+.photo:hover > .overlay{
+    width: 100%;
+    z-index: 10;
+    height: 100%;    
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+}
+.overlay:active{
+    width: 0;
+}
+.photo:hover{
+    z-index: 11;
+}
+.noPhoto{
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    font-size: 30px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.lightBox {
+    /* visibility: hidden;
+    opacity: 0; */
+    display: none;
+}
+.lightBox:target {
+    /* opacity: 1;
+    visibility: visible; */
+    display: flex;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    padding: 20%;
+    top:0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    /* background-color: rgba(241, 80, 0,0.8); */
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.boxImg{
+    position: relative;
+    width: 100%;
+    /* height: 80%; */
+    /* margin: 10%  auto; */
+    color: white;
+}
+
+.boxImg img{
+    width: 80%;
+    /* margin: 15% auto; */
+}
+.btnPrev{
+    text-decoration: none;
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    /* width: 5px; */
+    top: 35%;
+    left: -10%;
+    color: white;
+    /* background-color: red; */
+    padding: 3%;
+}
+
+.btnNext{
+    text-decoration: none;
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    /* width: 5px; */
+    top: 35%;
+    right: -10%;
+    color: white;
+    /* background-color: red; */
+    padding: 3%;
+}
+.btnClose{
+    position: absolute;
+    top: -5%;
+    right: 0;
+    font-size: 0.8em;
+    font-family: calibri;
+    font-weight: bold;
+    padding: 0.5% 2% 0.5% 2%; /* ainda precisa de edição */
+    background-color: white;
+    border-radius: 8%;
+    color: black;
+    text-decoration: none;
+    border: 1px solid white
+}
+.boxImg img{
+    opacity: 0;
+}
+.lightBox:target .boxImg img{
+    opacity: 1;
+    transition: opacity 0.4 linear;
+}
+.infoPhoto{
+    width: 50%;
+    padding: 0;
+    margin: 0 auto; 
+} 
+.infoPhoto h3{
+    margin: 0;
+    font-size: 1.2em;
+}
+.infoPhoto p{
+    padding: 0;
+    margin: 5px 0;
+    font-size: 1em;
+    line-height: 30px;
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+    .btnClose{
+        top: -5%;
+        padding: 0.5% 1% 0.5% 1%; 
+    }
+}
+@media (min-width: 1200px) {
+}
